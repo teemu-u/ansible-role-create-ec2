@@ -33,17 +33,16 @@ This role does not need any other role.
 
 Example Playbook
 ----------------
-- name: Create a server using EC2 module
-  hosts: localhost
-  connection: local
-  vars:
-    ami: ami-1fbad07c
-    sec_group: sg-77602f11
-    region: ap-southeast-1
-    subnet: subnet-9d05befe
-    server: my_server
-  roles:
-    - create-ec2
+    hosts: localhost
+    connection: local
+    vars:
+      ami: ami-1fbad07c
+      sec_group: sg-77602f11
+      region: ap-southeast-1
+      subnet: subnet-9d05befe
+      server: my_server
+    roles:
+      - create-ec2
 
 
 
