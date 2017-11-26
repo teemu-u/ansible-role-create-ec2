@@ -19,5 +19,10 @@ galaxy_info:
         - all
   galaxy_tags: 
     - EC2
+    - Launch EC2
+    - Create EC2
+    - Spinup EC2
+    - AWS EC2
+    - Amazon EC2
     - AWS
     - Cloud
