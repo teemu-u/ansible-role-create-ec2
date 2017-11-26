@@ -5,12 +5,18 @@ galaxy_info:
   license: license (GPLv2, CC-BY, etc)
   min_ansible_version: 2.3
   platforms:
-    - name: CentOS
+    - name: Amazon
       versions:
-        - 7
+        - all
     - name: EL
       versions:
-        - 7
+        - all
+    - name: Ubuntu
+      version:
+        - all
+    - name: Debian
+      version:
+        - all
   galaxy_tags: 
     - EC2
     - AWS
