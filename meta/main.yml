@@ -2,24 +2,16 @@ galaxy_info:
   author: Sameer Kumar
   description: Solutions Architect
   company: Ashnik Pte Ltd
-
-license: license (GPLv2, CC-BY, etc)
-
-min_ansible_version: 2.3
-
-
-platforms:
-  - name: CentOS
-    versions:
-      - 7.x
-  - name: Red Hat Enterprise Linux
-    versions:
-      - 7.x
- 
-
-galaxy_tags: 
-  - EC2
-  - AWS
-  - Cloud
-
-#dependencies:
+  license: license (GPLv2, CC-BY, etc)
+  min_ansible_version: 2.3
+  platforms:
+    - name: CentOS
+      versions:
+        - 7.x
+    - name: Red Hat Enterprise Linux
+      versions:
+        - 7.x
+  galaxy_tags: 
+    - EC2
+    - AWS
+    - Cloud
