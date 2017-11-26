@@ -45,4 +45,7 @@ GNU
 
 Author Information
 ------------------
+sameer.kasi200x@gmail.com
+sameer.kumar@ashnik.com
 
+Twitter: @sameerkasi200x
