@@ -10,10 +10,10 @@ min_ansible_version: 2.3
 
 platforms:
   - name: CentOS
-     versions:
+    versions:
       - 7.x
   - name: Red Hat Enterprise Linux
-     versions:
+    versions:
       - 7.x
  
 
