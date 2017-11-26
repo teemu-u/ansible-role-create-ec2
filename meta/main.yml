@@ -23,6 +23,8 @@ galaxy_info:
     - Create EC2
     - Spinup EC2
     - AWS EC2
+    - AWS Instance
+    - EC2 Instance
     - Amazon EC2
     - AWS
     - Cloud
