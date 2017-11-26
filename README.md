@@ -1,7 +1,7 @@
 Role Name
 =========
 
-This role is to create a new EC2 Instance and add to the inventory.
+This role is to launch a new EC2 Instance and add to the inventory. You can use it for creating an instance with a particular name and then later use another playbook/role to perform tasks on that server e.g. install web server etc.
 
 
 Requirements
@@ -44,6 +44,7 @@ Example Playbook
     roles:
       - create-ec2
 
+An example for using this role for deploying a a Web Application is over here in my other GitHub repository [Basic Web Application with Ansible](https://github.com/sameerkasi200x/basic-web-app-with-ansible)
 
 
 License
