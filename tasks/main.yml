@@ -25,12 +25,12 @@
         create: yes
         content: |
               ansible_host: {{ item.private_ip }}
-              ansible_user: centos
+              ansible_user: {{ ami_user }}
               host_region: {{ item.region }}
               instance_type: {{ item.instance_type }}
               host_az: {{ item.placement }}
-              host_os: CentOS
-              os_version: 7
+              host_os: {{ ami_os }}
+              os_version: {{ ami_os_version }}
       with_items: '{{ ec2_output.instances }}'
 
     - name: Add the newly created instance to inventory

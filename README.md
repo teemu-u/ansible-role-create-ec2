@@ -31,6 +31,9 @@ Below is a list of mandatory variables-
  * instance_size: Size of instance. Default is t2.small. Refer [online documentation for other valid instance size](https://aws.amazon.com/ec2/instance-types/)
  * vol_size_gb: Size of the root device to be added. Default is 20 (unit is alway GB).
  * vol_type: Type of volume to be used for root device. Default is gp2.
+ * ami_user: User to be used for ssh, as per the AMI. Default is centos.
+ * ami_os: Os of your AMI. Default is CentOS.
+ * ami_os_version: Version of the Operating System. Default is 7.
 
 Dependencies
 ------------
