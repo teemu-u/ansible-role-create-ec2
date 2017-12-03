@@ -1,2 +1,12 @@
 ---
 # defaults file for create-ec2
+
+ssh_key: MyEC2KeyPair
+instance_size: t2.small
+vol_size: 20
+inventory_file_path: /etc/ansible/hosts
+ami: ami-1fbad07c
+sec_group: sg-77602e11
+region: ap-southeast-1
+subnet: subnet-9d05befa
+
