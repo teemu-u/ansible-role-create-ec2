@@ -15,17 +15,22 @@ To do
 --------------
 
  * Going forward optional variables will be added to provide AWS Access Key and AWS Secret Key. This will allow this role to be invoked when invoking EC2 servers don't have appropriate role or when invoking server is not in EC2.
+ * Allow users to add an array of volumes.
  * Going forward the variable will made optional and a subnet and security group will be created on the fly.
  * Provide a variable to control whether in the end Ansible inventory and host variables should be updated or not.
 
 Role Variables
 --------------
 Below is a list of mandatory variables-
- * ami: Defines the AMI which has to be used for creating the instance
- * sec_group: Defines the security group to be used for new instance
- * region: Region in which the new instance will be created
- * subnet: Subnet in which the new instance will be created
- * server: Server name. An entry of this name will be added to host_vars and /etc/ansible/hosts
+ * ami: Defines the AMI which has to be used for creating the instance. Default is ami-1fbad07c ([community Centos 7 Image](https://aws.amazon.com/marketplace/pp/B00O7WM7QW) )
+ * sec_group: Defines the security group to be used for new instance. This is a mandatory parameter.
+ * region: Region in which the new instance will be created. Default is ap-southeast-1 (Singapore). [Valid values are provided on AWS official documentation on region and availability zone](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions)
+ * subnet: Subnet in which the new instance will be created. CUrrently this role does not offer facility to choose Availability Zone, hence you must have a subnet in desired availability zone and use it here. This is a mandatory parameter.
+ * server: Server name. An entry of this name will be added to host_vars and file indicated by variable {{ inventory_file_path }}
+ * ssh_key: SSH Key to be added to the instance. Default is MyEC2KeyPair.
+ * instance_size: Size of instance. Default is t2.small. Refer [online documentation for other valid instance size](https://aws.amazon.com/ec2/instance-types/)
+ * vol_size_gb: Size of the root device to be added. Default is 20 (unit is alway GB).
+ * vol_type: Type of volume to be used for root device. Default is gp2.
 
 Dependencies
 ------------

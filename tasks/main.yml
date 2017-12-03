@@ -12,8 +12,8 @@
         vpc_subnet_id: '{{ subnet }}'
         volumes:
            - device_name: /dev/sda1
-             volume_type: gp2
-             volume_size: "{{ vol_size }}"
+             volume_type: "{{ vol_type }}"
+             volume_size: "{{ vol_size_gb }}"
              delete_on_termination: true
         assign_public_ip: yes
       register: ec2_output
