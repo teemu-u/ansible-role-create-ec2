@@ -35,14 +35,6 @@
       loop_control:
         loop_var: my_ec2_server
 
-    - name: Add the newly created instance to inventory
-      lineinfile:
-        path: "{{ inventory_file_path }}"
-        line: "{{ app_name | default('ec2')}}-{{ server }} ansible_host={{ my_ec2_server.private_ip }} ansible_user={{ ami_user }} provider={{ provider }} host_os={{ ami_os }}"
-      with_items: "{{ ec2_output.instances }}"
-      loop_control:
-        loop_var: my_ec2_server
-
 
     - name: Wait for a while before confirming the server is ready
       vars:
@@ -54,19 +46,3 @@
       with_items: "{{ ec2_output.instances }}"
       loop_control:
         loop_var: my_ec2_server
-
-
-    - name: "Add newly created host {{ my_ec2_server.private_ip }} to inventory"
-      add_host:
-        hostname: "{{ server }}"
-        ansible_host: "{{ my_ec2_server.private_ip }}"
-        ansible_user: "{{ ami_user }}"
-        host_region: "{{ my_ec2_server.region }}"
-        instance_type: "{{ my_ec2_server.instance_type }}"
-        host_az: "{{ my_ec2_server.placement }}"
-        host_os: "{{ ami_os }}"
-        os_version: "{{ ami_os_version }}"
-      with_items: "{{ ec2_output.instances }}"
-      loop_control:
-        loop_var: my_ec2_server
-
