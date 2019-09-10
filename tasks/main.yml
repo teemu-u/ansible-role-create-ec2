@@ -17,14 +17,3 @@
              delete_on_termination: true
         assign_public_ip: yes
       register: ec2
-
-
-
-- name: Linux | Wait for SSH to come up
-  wait_for:
-    host: "{{ item.public_ip }}"
-    port: 22
-    delay: 1
-    timeout: 320
-    state: started
-  with_items: "{{ ec2.instances }}"
